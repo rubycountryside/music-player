@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>play music</title>
+	<style type="text/css">
+		@keyframes blackRotate{
+			from{
+				-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(0deg);
+			}
+			25%{
+				-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(90deg);
+			}
+			50%{
+				-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(180deg);
+			}
+			75%{
+				-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(270deg);
+			}
+			to{
+				-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(360deg);
+			}
+		}
+		.wrap{
+			margin:100px auto;
+		}
+		#bckgrd{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 440px;
+			height: 440px;
+			border-radius: 440px;
+			border:1px solid red;
+			background: url(black.jpg) -30px -30px /500px 500px no-repeat;
+			box-shadow: rgba(15,26,5,0.6) 0 0 10px 10px;
+			-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(0deg);
+		}
+		#bckgrd img{
+			margin-top: 150px;
+			margin-left: 150px;
+			opacity: 0.5;
+			width:140px; 
+			height:140px;
+			border-radius:120px;
+			-webkit-transform: /*rotateX(50deg)*/ perspective(600px) rotateZ(0deg);
+		}
+		#bckgrd{
+			animation:blackRotate 30s linear 0s infinite;
+		}
+		#playBar{
+			position: absolute;
+			top: 600px;
+			left: 220px;
+		}
+	</style>
+	<script style="text/javascript">
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="bckgrd">
+			<img src="info.png" alt="">
+		</div>
+		<div id="playBar">
+			<audio controls="controls">
+			  <source src="dangerous.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+	</div>	
+</body>
+</html>
